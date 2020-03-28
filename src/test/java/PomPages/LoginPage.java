@@ -16,13 +16,14 @@ public LoginPage(WebDriver dr){
 	this.dr=dr;
 	e=new ExplicitCode();
 }
-
+//xpaths for login page
 By profile=By.xpath("//ul[@class='list-inline']//li[2]");
 By login=By.xpath("//*[@id='top-links']//following::a[4]");
 By email=By.xpath("//*[@id='input-email']");
 By pass=By.xpath("//*[@id='input-password']");
 By click=By.xpath("//*[@value='Login']");
 By alert=By.xpath("//div[@class='alert alert-danger alert-dismissible']//i");
+//pom methods for login page
 public void pr(){
 System.out.println("inn profile");
 WebElement e_id=e.clickable(profile, 20);
@@ -48,6 +49,7 @@ public void  button() {
 	WebElement e_id=e.clickable(click, 20);
 	e_id.click();	
 }
+//method for login page
 public void Login(String email,String password) {
 	this.pr();
 	this.log();
@@ -60,6 +62,7 @@ public String title() {
 	String s=dr.getTitle();
 	return s;
 }
+// method for invalid user error message
 public String message() {
 	String s=dr.findElement(alert).getText();
 	return s;

@@ -14,9 +14,11 @@ public class DesktopVerification {
 		this.dr=dr;
 		e=new ExplicitCode();
 	}
+	//xpaths for desktop verification
 	By Desktops=By.xpath("//*[@id='menu']//following::a[1]");
 	By ShowDesk=By.xpath("//*[@id='menu']//following::a[4]");
 	By Verify=By.xpath("//*[@id='content']//h2");
+	//pom methods for desktop verification
 	public void ClickP() {
 		WebElement e_id=e.clickable(Desktops, 20);
 		e_id.click();
@@ -30,6 +32,7 @@ public class DesktopVerification {
 		String r=e_id.getText();
 		return r;
 	}
+	//method for desktop verification
 	public void VerifyDe() {
 		this.ClickP();
 		this.ClickA();

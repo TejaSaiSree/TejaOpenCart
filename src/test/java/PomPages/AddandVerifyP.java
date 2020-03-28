@@ -14,11 +14,11 @@ public class AddandVerifyP {
 		this.dr=dr;
 		e=new ExplicitCode();
 	}
-	
+	//xpaths for add and verify the products
 	By shoppingcart=By.xpath("//*[@id='cart']//button");
 	By viewcart=By.xpath("//*[@id='cart']//following::a[3]");
 	By bookname=By.xpath("//*[@class='table-responsive']//following::a[2]");
-
+    //pom methods for the xpaths
 	public void ClickS() {
 		WebElement e_id=e.clickable(shoppingcart, 20);
 		e_id.click();
@@ -32,6 +32,7 @@ public class AddandVerifyP {
 		String r=e_id.getText();
 		return r;
 	}
+	//method to add and verify
 	public void AddVerify() {
 		
 		this.ClickS();

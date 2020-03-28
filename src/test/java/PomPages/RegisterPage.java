@@ -18,6 +18,7 @@ public RegisterPage(WebDriver dr){
 	this.dr=dr;
 	e= new ExplicitCode();
 }
+//xpaths for register page
 By profile=By.xpath("//ul[@class='list-inline']//li[2]");
 By register=By.xpath("//ul[@class='list-inline']//li[2]//ul//li[1]/a ");
 By username=By.xpath("//input[@name='firstname'] ");
@@ -30,6 +31,7 @@ By  agree=By.xpath("//input[@name='agree']");
 By Btn=By.xpath("//input[@class='btn btn-primary']");
 By Btn1= By.xpath("//div[@class='pull-right']");
 By my=By.xpath("//div[@id='content']//h2[1]");
+//pom methods for register page
 public void pr(){
 System.out.println("inn profile");
 WebElement e_id=e.clickable(profile, 20);
@@ -91,6 +93,7 @@ public String  myaccount() {
 	String s=e_id.getText();
 	return s;
 }
+//method for register page
 public void Register(String fn,String ln,String email,String tele,String password) {
 	this.pr();
 	this.log();

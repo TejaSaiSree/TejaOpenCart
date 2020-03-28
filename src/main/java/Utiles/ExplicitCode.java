@@ -18,7 +18,7 @@ import org.testng.log4testng.Logger;
 
 import excel_utilities.getexcel;
 
-public class ExplicitCode extends getexcel{
+public class ExplicitCode extends getexcel{//here we are extending getexcel to acquire the properties and variables for get excel 
 	protected static WebDriver dr;
 	  static int counter=1;
 

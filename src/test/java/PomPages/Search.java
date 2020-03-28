@@ -14,11 +14,13 @@ public class Search {
 		this.dr=dr;
 		e=new ExplicitCode();
 	}
+	//xpaths for searching the product
 	By search=By.xpath("//input[@name='search']");
 	By option=By.xpath("//div[@id='search']//span//button ");
 	By message=By.xpath("//input[@id='button-search']//following::p[1]");
 	By product=By.xpath("/html/body/div[2]/div/div/div[3]/div[1]/div/div[1]");
 	By addtocart=By.xpath("//button[@id='button-cart']");
+	//pom method for searching the product
 	public void ClickP() {
 		WebElement e_id=e.clickable(product, 20);
 		e_id.click();
@@ -40,6 +42,7 @@ public class Search {
 		String s=e_id.getText();
 		return s;
 	}
+	//method for searching the product
 	public void searchtheproduct(String r) {
 		this.searchproduct(r);
 		this.searchoption();
